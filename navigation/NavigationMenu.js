@@ -18,9 +18,15 @@ function NavigationMenu() {
           headerShown: false,
         }}
       />
-      <Stack.Screen name='Current Deck' component={DeckView} />
-      <Stack.Screen name='New Card' component={NewCard} />
-      <Stack.Screen name='Quiz View' component={QuizView} />
+      <Stack.Screen name='DeckView' component={DeckView} options={{
+        title: 'Current Deck',
+      }} />
+      <Stack.Screen name='NewCard' component={NewCard} options={{
+        title: 'New Card',
+      }} />
+      <Stack.Screen name='QuizView' component={QuizView}  options={{
+        title: 'Quiz',
+      }}/>
     </Stack.Navigator>
   )
 }

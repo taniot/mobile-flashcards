@@ -11,8 +11,8 @@ function TabMenu() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: '#CC0000',
-        inactiveTintColor: '#666666',
+        activeTintColor: main,
+        inactiveTintColor: primary,
         style: {
           padding: 10,
           paddingBottom: 10,
