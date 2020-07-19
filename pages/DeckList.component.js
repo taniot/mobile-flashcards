@@ -15,9 +15,7 @@ class DeckList extends Component {
     })
   }
 
-  componentWillUnmount() {
-    this.focus.remove()
-  }
+
 
   render() {
     const { decks } = this.props

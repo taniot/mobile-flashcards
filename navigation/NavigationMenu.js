@@ -25,7 +25,7 @@ function NavigationMenu() {
         title: 'New Card',
       }} />
       <Stack.Screen name='QuizView' component={QuizView}  options={{
-        title: 'Quiz',
+        title: 'Quiz', 
       }}/>
     </Stack.Navigator>
   )

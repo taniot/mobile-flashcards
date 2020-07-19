@@ -52,7 +52,37 @@ const DefaultStyle = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginTop: 15,
-  }
+  },
+  sorryText: {
+    fontSize: 15,
+    color: main,
+    marginBottom: 20,
+    fontWeight: 'bold',
+    lineHeight:25
+  },
+ answersCounter: {
+    fontSize: 15,
+  
+    fontWeight:"bold",
+    backgroundColor: backGround,
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20
+
+
+  },
+  questionText: {
+    fontSize: 20,
+    color: main,
+    marginBottom: 10,
+    fontWeight: 'bold',
+  },
+  answerText: {
+    fontSize: 15,
+    color: primary,
+    marginBottom: 20,
+    fontWeight: 'bold',
+  },
 })
 
 export default DefaultStyle
