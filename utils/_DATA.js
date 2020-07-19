@@ -1,5 +1,5 @@
 import { AsyncStorage } from 'react-native'
-export const APP_STORAGE_KEY = 'MobileFlashCards:KEY';
+export const APP_STORAGE_KEY = 'MobileFlashCards';
 
 //database
 

@@ -8,29 +8,35 @@ import DefaultStyle from '../utils/style'
 
 class DeckList extends Component {
   componentDidMount() {
-   
+    this.focus = this.props.navigation.addListener('focus', () => {
       getDecks().then((res) => {
         this.props.dispatch(receiveDecks(res))
       })
-   
+    })
   }
 
+  componentWillUnmount() {
+    this.focus.remove()
+  }
 
   render() {
     const { decks } = this.props
+    console.log(this.props)
     return (
       <ScrollView style={DefaultStyle.main}>
         <Text style={DefaultStyle.title}>Decks List</Text>
         {decks ? (
           Object.keys(decks).map((title) => (
-            <Deck 
+            <Deck
               deckTitle={title}
               navigation={this.props.navigation}
               key={title}
             />
           ))
         ) : (
-          <View><Text>Sono qui</Text></View>
+          <View>
+            <Text>Sono qui</Text>
+          </View>
         )}
       </ScrollView>
     )
