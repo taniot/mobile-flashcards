@@ -19,7 +19,7 @@ function NavigationMenu() {
         }}
       />
       <Stack.Screen name='DeckView' component={DeckView} options={{
-        title: 'Current Deck',
+        title: 'Deck Info',
       }} />
       <Stack.Screen name='NewCard' component={NewCard} options={{
         title: 'New Card',

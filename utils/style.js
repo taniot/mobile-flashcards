@@ -36,6 +36,23 @@ const DefaultStyle = StyleSheet.create({
     fontSize: 12,
     marginBottom: 5,
   },
+  deckInfoTitle: {
+    color: primary,
+    fontSize: 21,
+    marginBottom: 5,
+   fontWeight:"bold"
+  },
+  deckInfoDetail: {
+    color: primary,
+    fontSize: 15,
+    marginBottom: 5,
+  },
+  buttonsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 15,
+  }
 })
 
 export default DefaultStyle
