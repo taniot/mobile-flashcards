@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { storeDeck } from '../actions/decks'
 import { saveDeckTitle } from '../utils/api'
 import DefaultStyle from '../utils/style'
-import { main, primary } from '../utils/colors'
+
 class NewDeck extends Component {
   state = { title: '' }
 
@@ -23,7 +23,7 @@ class NewDeck extends Component {
   render() {
     return (
       <View style={DefaultStyle.main}>
-        <Text style={localStyle.title}>New Deck</Text>
+        <Text style={DefaultStyle.title}>New Deck</Text>
         <TextInput
           onChangeText={this.handleTextChange}
           placeholder='Title'
@@ -41,13 +41,5 @@ class NewDeck extends Component {
   }
 }
 
-const localStyle = StyleSheet.create({
-  title: {
-    fontSize: 20,
-    color: main,
-    marginBottom: 10,
-    fontWeight: 'bold',
-  },
-})
 
 export default connect()(NewDeck)

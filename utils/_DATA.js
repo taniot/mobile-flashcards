@@ -1,10 +1,10 @@
 import { AsyncStorage } from 'react-native'
-export const APP_STORAGE_KEY = 'MobileFlashCards';
+export const APP_STORAGE_KEY = 'MobileFlashCards:KEY';
 
 //database
 
 export const data = {
-    JavaScript: {
+    Countries: {
         title: 'Countries',
         questions: [
             {
@@ -21,7 +21,7 @@ export const data = {
             }
         ]
     },
-    React: {
+    Sports: {
         title: 'Sports',
         questions: [
             {

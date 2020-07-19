@@ -15,11 +15,10 @@ class DeckView extends Component {
             })
           }
         >
-         
           <View style={DefaultStyle.deckItem}>
             <View>
-              <Text>{deck.title}</Text>
-              <Text>
+              <Text style={DefaultStyle.deckTitle}>{deck.title}</Text>
+              <Text style={DefaultStyle.deckDetail}>
                 {deck.questions.length} cards
               </Text>
             </View>
@@ -34,8 +33,5 @@ const mapStateToProps = ({ decks }, { deckTitle, navigation }) => ({
   deck: decks[deckTitle],
   navigation,
 })
-
-
-
 
 export default connect(mapStateToProps)(DeckView)

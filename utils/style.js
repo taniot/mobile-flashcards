@@ -16,15 +16,25 @@ const DefaultStyle = StyleSheet.create({
   title: {
     fontSize: 20,
     color: main,
-    marginBottom: 10,
+    marginBottom: 20,
     fontWeight: 'bold',
   },
   deckItem: {
     backgroundColor: backGround,
     padding: 15,
-    marginBottom: 10,
-    marginTop: 10,
+    marginBottom: 20,
     borderRadius: 10,
+  },
+  deckTitle: {
+    color: primary,
+    fontSize: 15,
+    marginBottom: 5,
+   fontWeight:"bold"
+  },
+  deckDetail: {
+    color: primary,
+    fontSize: 12,
+    marginBottom: 5,
   },
 })
 
