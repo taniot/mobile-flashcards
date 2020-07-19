@@ -83,6 +83,10 @@ class QuizView extends Component {
             />
             {!toggle && (
               <View>
+              <Text>What do you think?</Text>
+
+              <View style={DefaultStyle.buttonsContainer}>
+             
                 <Button
                   title='Correct'
                   onPress={() => this.handleGuess('correct')}
@@ -92,6 +96,7 @@ class QuizView extends Component {
                   onPress={() => this.handleGuess('inCorrect')}
                 />
               </View>
+              </View>
             )}
           </View>
         ) : (
@@ -99,6 +104,7 @@ class QuizView extends Component {
             <Text style={DefaultStyle.answersCounter}>
               Correct Answers: {this.state.correctAnwers} out of {deck.questions.length}
             </Text>
+            <View style={DefaultStyle.buttonsContainer}>
             <Button title='Restart Quiz' onPress={this.startOverQuiz} />
             <Button
               title='Back to Deck'
@@ -108,6 +114,7 @@ class QuizView extends Component {
                 })
               }
             />
+            </View>
           </View>
         )}
       </View>
