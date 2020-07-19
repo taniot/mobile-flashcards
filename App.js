@@ -1,16 +1,12 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import NavigationMenu from './navigation/stack'
+
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <NavigationContainer>
+      <NavigationMenu />
+    </NavigationContainer>
   );
 }
