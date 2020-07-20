@@ -33,7 +33,7 @@ class DeckList extends Component {
           ))
         ) : (
           <View>
-            <Text></Text>
+            <Text>There are no decks, start by creating one!</Text>
           </View>
         )}
       </ScrollView>
