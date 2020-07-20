@@ -1,44 +1,36 @@
-# My Universal React Project
+# Mobile Flashcards
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.io/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
-</p>
+Mobile Flashcards is a React Native app for iOS and Android that allows users to create decks, add cards and quiz themselves.
+It uses React Native, Expo, Redux, & React Navigation.
 
-## 🚀 How to use
+This app is the third of three projects required for Udacity's React Nanodegree program.
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
 
-## Adding Native Code
+## Installation
 
-This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
+Clone the repository, change directories, and use npm or yarn to install the dependencies.
 
-- Run `yarn eject` to create the native projects.
-- You can still run your project in the web browser or Expo client, you just won't be able to access any new native modules you add.
+```bash
+$ git clone https://github.com/taniot/mobile-flashcards.git
+$ cd mobile-flashcards
+$ yarn
+```
 
-## Publishing
+## Usage
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.io/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.io/distribution/publishing-websites/).
+The project can be run with npm or yarn
 
-## 📝 Notes
+- `yarn start`
 
-- Learn more about [Universal React](https://docs.expo.io/).
-- See what API and components are [available in the React runtimes](https://docs.expo.io/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.io/guides/).
+This will open Expo Developer Tools in the browser.  You can then do one of the following.
+
+- Use your device to test using Expo.
+- Use an Android Emulator or iOS Simulator to run the app.
+
+
+## Testing
+
+This project has been tested on the following emulators:
+
+- iOS 11+
+- Android 9+.
