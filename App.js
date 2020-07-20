@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { View, Dimensions } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import NavigationMenu from './navigation/NavigationMenu'
@@ -8,9 +8,15 @@ import { Provider } from 'react-redux'
 import reducer from './reducers/decks'
 import middleware from './middleware/index'
 import { main } from './utils/colors'
+import {  setLocalNotification } from './utils/notifications'
+
 const store = createStore(reducer, middleware)
 
 class App extends Component {
+  componentDidMount() {
+    setLocalNotification()
+  }
+
   render() {
     return (
       <Provider store={store}>

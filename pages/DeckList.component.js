@@ -33,7 +33,7 @@ class DeckList extends Component {
           ))
         ) : (
           <View>
-            <Text>Sono qui</Text>
+            <Text></Text>
           </View>
         )}
       </ScrollView>
