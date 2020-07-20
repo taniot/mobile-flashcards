@@ -4,6 +4,13 @@ import { View, Text } from 'react-native'
 import Button from '../components/Button.component'
 import { connect } from 'react-redux'
 import DefaultStyle from '../utils/style'
+import {
+  clearLocalNotification,
+  setLocalNotification,
+} from '../utils/notifications'
+
+import QuizResult from '../components/QuizResult.component'
+
 class QuizView extends Component {
   state = {
     count: 0,
@@ -29,7 +36,7 @@ class QuizView extends Component {
       })
     }
     if (this.state.count === deck.questions.length) {
-      //clearLocalNotification().then(setLocalNotification);
+      clearLocalNotification().then(setLocalNotification)
     }
   }
 
@@ -71,7 +78,9 @@ class QuizView extends Component {
             <Text style={DefaultStyle.answersCounter}>
               Question: {this.state.count + 1} / {deck.questions.length}
             </Text>
-            <Text style={DefaultStyle.questionText}>{currentQuestion.question}</Text>
+            <Text style={DefaultStyle.questionText}>
+              {currentQuestion.question}
+            </Text>
             {!toggle && (
               <Text style={DefaultStyle.answerText}>
                 {currentQuestion.answer}
@@ -83,39 +92,29 @@ class QuizView extends Component {
             />
             {!toggle && (
               <View>
-              <Text>What do you think?</Text>
+                <Text>What do you think?</Text>
 
-              <View style={DefaultStyle.buttonsContainer}>
-             
-                <Button
-                  title='Correct'
-                  onPress={() => this.handleGuess('correct')}
-                />
-                <Button
-                  title='Incorrect'
-                  onPress={() => this.handleGuess('inCorrect')}
-                />
-              </View>
+                <View style={DefaultStyle.buttonsContainer}>
+                  <Button
+                    title='Correct'
+                    onPress={() => this.handleGuess('correct')}
+                  />
+                  <Button
+                    title='Incorrect'
+                    onPress={() => this.handleGuess('inCorrect')}
+                  />
+                </View>
               </View>
             )}
           </View>
         ) : (
-          <View>
-            <Text style={DefaultStyle.answersCounter}>
-              Correct Answers: {this.state.correctAnwers} out of {deck.questions.length}
-            </Text>
-            <View style={DefaultStyle.buttonsContainer}>
-            <Button title='Restart Quiz' onPress={this.startOverQuiz} />
-            <Button
-              title='Back to Deck'
-              onPress={() =>
-                this.props.navigation.navigate('DeckView', {
-                  deckTitle: deck.title,
-                })
-              }
-            />
-            </View>
-          </View>
+          <QuizResult
+            title={deck.title}
+            questions={deck.questions.length}
+            correctAnwers={this.state.correctAnwers}
+            startOverQuiz={this.startOverQuiz}
+            navigation={this.props.navigation}
+          />
         )}
       </View>
     )
